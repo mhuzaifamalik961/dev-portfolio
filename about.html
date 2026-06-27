@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Global Link Trade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
+            align-items:center;
+            margin-top:50px;
+        }
+        .about img{
+            width:100%;
+            border-radius:15px;
+        }
+        .about-text h3{
+            color:#05142d;
+            margin-bottom:20px;
+            font-size:30px;
+        }
+        .about-text p{
+            line-height:1.9;
+            color:#555;
+            margin-bottom:15px;
+        }
+        .values-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+            margin-top:30px;
+        }
+        .value-item{
+            background:#05142d;
+            color:white;
+            padding:25px;
+            border-radius:12px;
+            text-align:center;
+        }
+        .value-item .icon{ font-size:35px; margin-bottom:10px; }
+        .value-item h4{ color:#f4b400; margin-bottom:8px; }
+        .value-item p{ color:#ccc; font-size:14px; }
+        @media(max-width:768px){
+            .about{ grid-template-columns:1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="logo">Global Link Trade</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <h1>About Our Company</h1>
+    <p>Trusted International Trade Partner Since Day One</p>
+</div>
+
+<!-- ABOUT SECTION -->
+<section>
+    <h2 class="section-title">Who We Are</h2>
+    <p class="section-sub">Building Global Business Connections</p>
+
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1565891741441-64926e441838" alt="Trade">
+        <div class="about-text">
+            <h3>Global Link Export & Import Pvt. Ltd.</h3>
+            <p>Global Link Export & Import Pvt. Ltd. is a leading international trading company dedicated to helping businesses connect with worldwide markets.</p>
+            <p>Our expertise includes import management, export documentation, customs compliance, international logistics, and product sourcing.</p>
+            <p>We proudly support clients across Asia, Europe, Africa, and the Middle East.</p>
+            <a href="contact.html" class="btn" style="margin-top:20px;">Get In Touch</a>
+        </div>
+    </div>
+
+    <!-- VALUES -->
+    <div style="margin-top:80px;">
+        <h2 class="section-title">Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="icon">🤝</div>
+                <h4>Trust</h4>
+                <p>Building long-term relationships based on reliability and integrity.</p>
+            </div>
+            <div class="value-item">
+                <div class="icon">🌍</div>
+                <h4>Global Reach</h4>
+                <p>Connecting businesses across 35+ countries worldwide.</p>
+            </div>
+            <div class="value-item">
+                <div class="icon">⚡</div>
+                <h4>Efficiency</h4>
+                <p>Fast, reliable, and cost-effective trade solutions.</p>
+            </div>
+            <div class="value-item">
+                <div class="icon">🏆</div>
+                <h4>Excellence</h4>
+                <p>98% client satisfaction through quality service.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>Global Link Export & Import Pvt. Ltd.</h2>
+    <p>CEO: Muhammad Junaid</p>
+    <p>Director Manager: Muhammad Uzair</p>
+    <p>Email: info@globallinktrade.com</p>
+    <p>Phone: +92 XXX XXXXXXX</p>
+    <p style="margin-top:30px;color:#aaa;">© 2026 Global Link Export & Import Pvt. Ltd. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

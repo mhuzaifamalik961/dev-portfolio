@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKY LARK Trading (Private) Ltd</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero{
+            height:100vh;
+            background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+            url("https://images.unsplash.com/photo-1578575437130-527eed3abbec");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+            padding:20px;
+        }
+        .hero-content{ max-width:850px; }
+        .hero h1{ font-size:65px; margin-bottom:20px; }
+        .hero p{ font-size:20px; line-height:1.8; margin-bottom:30px; }
+
+        .quick-links{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+            padding:80px 8%;
+            background:#05142d;
+        }
+        .quick-card{
+            background:rgba(255,255,255,0.08);
+            border:1px solid rgba(244,180,0,0.3);
+            padding:35px 25px;
+            border-radius:15px;
+            text-align:center;
+            text-decoration:none;
+            color:white;
+            transition:.3s;
+        }
+        .quick-card:hover{
+            background:rgba(244,180,0,0.15);
+            border-color:#f4b400;
+            transform:translateY(-5px);
+        }
+        .quick-card .icon{ font-size:45px; margin-bottom:15px; }
+        .quick-card h3{ color:#f4b400; font-size:20px; margin-bottom:10px; }
+        .quick-card p{ color:#ccc; font-size:14px; line-height:1.6; }
+
+        @media(max-width:768px){
+            .hero h1{ font-size:40px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="logo">Global Link Trade</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Global Export & Import Solutions</h1>
+        <p>Connecting businesses worldwide through reliable logistics, international trade management, product sourcing, customs clearance, and global supply chain solutions.</p>
+        <a href="about.html" class="btn">Explore More</a>
+    </div>
+</section>
+
+<!-- QUICK LINKS -->
+<div class="quick-links">
+    <a href="about.html" class="quick-card">
+        <div class="icon">🏢</div>
+        <h3>About Us</h3>
+        <p>Learn about our company, mission, and global trade expertise.</p>
+    </a>
+    <a href="services.html" class="quick-card">
+        <div class="icon">🚢</div>
+        <h3>Our Services</h3>
+        <p>Import, Export, Sea Freight, Air Freight & more.</p>
+    </a>
+    <a href="leadership.html" class="quick-card">
+        <div class="icon">👔</div>
+        <h3>Leadership</h3>
+        <p>Meet the experienced team driving our global success.</p>
+    </a>
+    <a href="contact.html" class="quick-card">
+        <div class="icon">📞</div>
+        <h3>Contact Us</h3>
+        <p>Get in touch for your international trade requirements.</p>
+    </a>
+</div>
+
+<!-- STATS -->
+<section style="background:#f5f7fa;">
+    <h2 class="section-title">Company Performance</h2>
+    <div class="service-grid">
+        <div class="service-card" style="text-align:center;">
+            <h2 style="font-size:50px;color:#f4b400;" class="counter" data-target="35">0</h2>
+            <h3>Countries Served</h3>
+        </div>
+        <div class="service-card" style="text-align:center;">
+            <h2 style="font-size:50px;color:#f4b400;" class="counter" data-target="500">0</h2>
+            <h3>Clients Worldwide</h3>
+        </div>
+        <div class="service-card" style="text-align:center;">
+            <h2 style="font-size:50px;color:#f4b400;" class="counter" data-target="10000">0</h2>
+            <h3>Shipments Delivered</h3>
+        </div>
+        <div class="service-card" style="text-align:center;">
+            <h2 style="font-size:50px;color:#f4b400;" class="counter" data-target="98">0</h2>
+            <h3>% Client Satisfaction</h3>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h2>Global Link Export & Import Pvt. Ltd.</h2>
+    <p>CEO: Muhammad Junaid</p>
+    <p>Director Manager: Muhammad Uzair</p>
+    <p>Email: info@globallinktrade.com</p>
+    <p>Phone: +92 XXX XXXXXXX</p>
+    <p style="margin-top:30px;color:#aaa;">© 2026 Global Link Export & Import Pvt. Ltd. All Rights Reserved.</p>
+</footer>
+
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+        if(count < target){
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCounter();
+});
+</script>
+
+</body>
+</html>
